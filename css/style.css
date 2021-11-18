@@ -27,7 +27,145 @@ body {
     justify-content: center;
     align-items: center;
 
+    font-size: 1.8rem;
+
+    background-color: var(--dark-cyan);
+}
+
+.backg {
+    display: flex;
+    justify-content: space-around;
+
     width: 100vw;
     height: 100vh;
+
+    background-color: var(--dark-cyan);
+
+    overflow: hidden;
+}
+
+.backg-top {
+    flex: 1;
+
+    background-image: url('../images/bg-pattern-top.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: relative;
+    top: -375px;
+    left: -50px;
+}
+
+.backg-bottom {
+    flex: 1;
+
+    background-image: url('../images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: relative;
+    bottom: -475px;
+    right: -50px;
+}
+
+.card {
+    margin: 2rem;
+
+    position: absolute;
+    z-index: 99;
+
+    border-radius: 1.2rem;
+    background-color: #fff;
+
+    box-shadow: 0px 20px 60px var(--dark-grayish-blue);
+}
+
+.card-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-photo-user {
+    position: absolute;
+    z-index: 99;
+}
+
+.card-photo-user img {
+    border: 0.5rem solid #fff;
+    border-radius: 50%;
+}
+
+.card-backg {
+    height: 18rem;
+
+    background-image: url('../images/bg-pattern-card.svg');
+    background-size: cover;
+
+    border-radius: 1.2rem 1.2rem 0rem 0rem;
+}
+
+.card-user {
+    margin: 7.8rem 11rem 3rem 11rem;
+
+    text-align: center;
+    font-size: 1.4rem;
+
+    line-height: 3.5rem;
+
+    color: var(--dark-grayish-blue);
+}
+
+.card-user h1 {
+    font-weight: 400;
+}
+
+.card-user span {
+    font-weight: 700;
+
+    color: var(--very-dark-gray-desaturated-blue);
+}
+
+.card-statistic {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+    width: 100%;
+
+    border-top: 1px solid var(--dark-gray);
+}
+
+.statistic-info {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    color: var(--dark-grayish-blue);
+}
+
+.statistic-info strong {
     font-size: 1.8rem;
+    color: var(--very-dark-gray-desaturated-blue);
+}
+
+@media (max-width: 470px) {
+    .card-user {
+        margin: 7.8rem 6rem 3rem 6rem;
+    }
+}
+
+@media (max-width: 365px) {
+    .card-user {
+        margin: 7.8rem 5rem 3rem 5rem;
+
+        font-size: 1.2rem;
+    }
+
+    .card-statistic {
+        display: flex;
+        justify-content: space-between;
+    }
 }
